@@ -1,4 +1,4 @@
-def myTread(domain):
+def myThread(domain):
     subprocess.call(f'salt  -N CDN  cmd.run  \'rm -rf  /etc/nginx/cache/{domain}/*\'',shell=True)
     
 @app.route('/api/v1/cdn/clearcache',methods=['POST'])
